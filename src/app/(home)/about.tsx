@@ -3,7 +3,7 @@ import { ExternalLink } from "@/components/external-link";
 export const About = () => (
   <section className="space-y-6">
     {/* Hero */}
-    <div className="mt-12 space-y-3 leading-relaxed">
+    <div className="mt-22 space-y-3 leading-relaxed">
       <h1 id="about" className="text-4xl font-bold text-balance text-primary">
         <span className="text-neutral-400">Hi, I&apos;m Ethan.</span>
         <br />
