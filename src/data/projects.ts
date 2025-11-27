@@ -11,6 +11,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Portfolio",
     date: "Nov 2025",
+    link: "https://github.com/ethanbyeon/portfolio",
     tech: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Vercel"],
     summary: "This site.",
   },
