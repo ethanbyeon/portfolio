@@ -19,12 +19,13 @@ export const Projects = () => (
           <li
             key={exp.title}
             className="
-              group
+              group mt-2
               grid grid-cols-[minmax(0,2fr)_minmax(0,2fr)_minmax(0,1fr)]
+              items-center
               gap-x-4 gap-y-1 py-3
             "
           >
-            <div className="mt-2 col-span-1 flex items-center space-x-1">
+            <div className="col-span-1 flex items-center space-x-1">
               <h3 className="font-semibold text-primary">
                 {exp.link ? (
                   <ExternalLink
@@ -72,7 +73,7 @@ export const Projects = () => (
                 className="
                   grid grid-cols-1 sm:grid-cols-5
                   gap-y-0.5 gap-x-1
-                  text-xs text-neutral-500
+                  text-xs text-neutral-700
                 "
               >
                 {techList.map((tech) => (
