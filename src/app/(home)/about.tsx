@@ -7,9 +7,9 @@ export const About = () => (
       <h1 id="about" className="text-4xl font-bold text-balance text-primary">
         <span className="text-neutral-400">Hi, I&apos;m Ethan.</span>
         <br />
-        Software engineer from Los Angeles.
-        <br />I like building cool products that blend engineering, design, &
-        culture.
+        Software engineer from Los Angeles,
+        <br />
+        building cool products that blend engineering, design, & culture.
       </h1>
     </div>
 
