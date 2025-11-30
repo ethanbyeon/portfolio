@@ -6,10 +6,10 @@ export const NavBar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 z-50 flex w-full items-center justify-center",
-        "border-b boreder-neutral-700/30",
         "transition-transform duration-300 lg:bg-transparent",
         "[background-image:linear-gradient(#000000_1px,transparent_1px),linear-gradient(to_right,#000000_1px,rgba(0,0,0,0.7)_1px)]",
         "[background-position-y:1px] [background-size:2px_2px]",
+        "after:absolute after:-bottom-px after:left-0 after:h-px after:w-full after:bg-neutral-300/10",
       )}
     >
       <div className="flex w-full h-9 max-w-3xl items-center justify-between px-6">
