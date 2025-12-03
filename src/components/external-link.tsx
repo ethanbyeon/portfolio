@@ -42,7 +42,7 @@ export function ExternalLink({
       </span>
       <ArrowUpRight
         className={cn(
-          "h-4 w-4 m-0.5",
+          "h-4 w-4 m-0.25 text-neutral-500",
           "transition-colors duration-200 ease-in",
           iconClassName,
         )}

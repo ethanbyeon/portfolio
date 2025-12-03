@@ -2,7 +2,7 @@ import { CONTACTS } from "@/data/contacts";
 import { ExternalLink } from "@/components/external-link";
 
 export const Footer = () => (
-  <footer className="mt-22">
+  <footer className="mt-22 pb-12">
     <div className="flex flex-col justify-between md:flex-row gap-2">
       <div className="flex gap-8">
         {CONTACTS.map((contact) => (

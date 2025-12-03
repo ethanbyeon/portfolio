@@ -1,10 +1,20 @@
 import { ExternalLink } from "@/components/external-link";
+import { Contact } from "./contact";
+import { Technologies } from "./technologies";
 
 export const About = () => (
-  <section className="space-y-6">
+  <section
+    id="about"
+    className="
+      space-y-6 pt-22
+      scroll-mt-20
+      min-h-[100vh]
+      flex flex-col justify-center
+  "
+  >
     {/* Hero */}
-    <div className="mt-22 space-y-3 leading-relaxed">
-      <h1 id="about" className="text-4xl font-bold text-balance text-primary">
+    <div className="space-y-3 leading-relaxed">
+      <h1 className="text-4xl font-bold text-balance text-primary">
         <span className="text-neutral-400">Hi, I&apos;m Ethan.</span>
         <br />
         Software engineer from Los Angeles,
@@ -16,10 +26,8 @@ export const About = () => (
     {/* Body */}
     <div className="space-y-2 leading-relaxed font-medium text-neutral-400 text-balance max-w-xl">
       <p>
-        I&apos;m a recent Computer Science graduate from UC Santa Cruz, looking
-        for new opportunities where I can learn, build, and ship real products.
-      </p>
-      <p>
+        I&apos;m a recent Computer Science graduate from UC Santa Cruz, with a
+        focus on web products and data-driven, user-focused experiences.
         Recently, I built{" "}
         <ExternalLink
           href="https://padoh.vercel.app"
@@ -46,5 +54,8 @@ export const About = () => (
         ),
       )}
     </div>
+
+    <Contact />
+    <Technologies />
   </section>
 );

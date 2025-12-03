@@ -1,11 +1,8 @@
 export const TOOLS = [
-  "React",
   "Next.js",
+  "React",
   "Tailwind",
-  "shadcn/ui",
-  "Framer Motion",
   "Docker",
-  "Supabase",
-  "Vercel",
+  "Framer Motion",
   "Figma",
 ];

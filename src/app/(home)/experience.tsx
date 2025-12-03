@@ -2,10 +2,8 @@ import { ArrowUpRight } from "lucide-react";
 import { EXPERIENCE } from "@/data/experience";
 
 export const Experience = () => (
-  <section>
-    <h2 id="experience" className="mb-4 font-bold text-xl text-neutral-500">
-      Experience
-    </h2>
+  <section id="experience" className="scroll-mt-20">
+    <h2 className="mb-4 font-bold text-xl text-neutral-500">Experience</h2>
     <ul className="space-y-4">
       {EXPERIENCE.map((exp) => (
         <li

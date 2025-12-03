@@ -2,12 +2,10 @@ import { ExternalLink } from "@/components/external-link";
 import { PROJECTS } from "@/data/projects";
 
 export const Projects = () => (
-  <section>
-    <h2 id="projects" className="mb-2 font-bold text-xl text-neutral-500">
-      Projects
-    </h2>
+  <section id="projects" className="scroll-mt-20">
+    <h2 className="mb-2 font-bold text-xl text-neutral-500">Projects</h2>
 
-    <ul className="divide-y divide-neutral-800">
+    <ul>
       {PROJECTS.map((exp) => {
         const techList = Array.isArray(exp.tech)
           ? exp.tech
@@ -19,10 +17,31 @@ export const Projects = () => (
           <li
             key={exp.title}
             className="
-              group mt-2
+              group relative mt-2
               grid grid-cols-[minmax(0,2fr)_minmax(0,2fr)_minmax(0,1fr)]
               items-center
               gap-x-4 gap-y-1 py-3
+
+              border-b border-neutral-800
+              transition-all duration-500
+
+              before:content-['']
+              before:absolute before:left-0 before:bottom-[-1px]
+              before:h-px before:w-full
+              before:bg-foreground
+              before:opacity-0
+              before:transition-opacity before:duration-500
+              hover:before:opacity-100
+
+              after:content-['']
+              after:pointer-events-none
+              after:absolute after:left-0 after:bottom-0
+              after:h-px after:w-full
+              after:bg-foreground
+              after:origin-center
+              after:scale-x-0
+              after:transition-transform after:duration-300 after:ease-in-out
+              hover:after:scale-x-100
             "
           >
             <div className="col-span-1 flex items-center space-x-1">
@@ -60,8 +79,8 @@ export const Projects = () => (
             <div className="col-span-3 space-y-1">
               <p
                 className="
-                  text-sm text-balance text-neutral-600 group-hover:text-neutral-400
-                  line-clamp-2
+                  text-sm text-balance line-clamp-2
+                  text-neutral-500
                 "
               >
                 {exp.summary}
@@ -71,9 +90,9 @@ export const Projects = () => (
             <div className="col-span-3 mt-4">
               <div
                 className="
-                  grid grid-cols-1 sm:grid-cols-5
+                  grid grid-cols-3 sm:grid-cols-5
                   gap-y-0.5 gap-x-1
-                  text-xs text-neutral-700
+                  text-xs text-neutral-600
                 "
               >
                 {techList.map((tech) => (

@@ -40,9 +40,9 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "antialiased bg-background",
+          "antialiased bg-background scroll-smooth",
           "mx-auto max-w-3xl min-h-screen",
-          "px-8 py-12 font-sans",
+          "px-8 font-sans",
           "[--content-max:70rem]",
           geistSans.variable,
           geistMono.variable,
