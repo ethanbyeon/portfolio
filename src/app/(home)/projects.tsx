@@ -3,7 +3,7 @@ import { PROJECTS } from "@/data/projects";
 
 export const Projects = () => (
   <section id="projects" className="scroll-mt-20">
-    <h2 className="mb-2 font-bold text-xl text-neutral-500">Projects</h2>
+    <h2 className="mb-2 font-bold text-xl uppercase dark:text-neutral-500">Projects</h2>
 
     <ul>
       {PROJECTS.map((exp) => {
@@ -22,7 +22,7 @@ export const Projects = () => (
               items-center
               gap-x-4 gap-y-1 py-3
 
-              border-b border-neutral-800
+              border-b dark:border-neutral-800
               transition-all duration-500
 
               before:content-['']
@@ -50,7 +50,7 @@ export const Projects = () => (
                   <ExternalLink
                     key={exp.title}
                     href={exp.link}
-                    className="inline-flex items-center gap-1"
+                    className="inline-flex gap-1"
                     iconClassName="h-4 w-4"
                     underlineClassName="group-hover:decoration-primary"
                   >
@@ -92,7 +92,7 @@ export const Projects = () => (
                 className="
                   grid grid-cols-3 sm:grid-cols-5
                   gap-y-0.5 gap-x-1
-                  text-xs text-neutral-600
+                  text-xs text-neutral-500 dark:text-neutral-600
                 "
               >
                 {techList.map((tech) => (

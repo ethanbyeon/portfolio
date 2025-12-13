@@ -1,9 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 import { EXPERIENCE } from "@/data/experience";
+import { ExternalLink } from "@/components/external-link";
 
 export const Experience = () => (
   <section id="experience" className="scroll-mt-20">
-    <h2 className="mb-4 font-bold text-xl text-neutral-500">Experience</h2>
+    <h2 className="mb-4 font-bold text-xl uppercase dark:text-neutral-500">
+      Experience
+    </h2>
     <ul className="space-y-4">
       {EXPERIENCE.map((exp) => (
         <li
@@ -11,7 +14,7 @@ export const Experience = () => (
           className="
               group
               relative flex flex-col pb-2
-              border-b border-neutral-800
+              border-b dark:border-neutral-800
               transition-all duration-500
               before:content-['']
               before:absolute before:left-0 before:bottom-[-1px]
@@ -33,24 +36,17 @@ export const Experience = () => (
         >
           <div className="mb-2">
             <div className="flex justify-between items-center">
-              <h3 className="font-bold text-primary text-lg">
+              <h3 className="font-semibold text-primary text-lg">
                 {exp.link ? (
-                  <a
+                  <ExternalLink
+                    key={exp.title}
                     href={exp.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex"
+                    className="inline-flex gap-1"
+                    iconClassName="h-4 w-4"
+                    underlineClassName="group-hover:decoration-primary"
                   >
-                    <span>{exp.company}</span>
-                    <ArrowUpRight
-                      className="
-                          h-4 w-4 text-neutral-400
-                          opacity-0 m-0.5
-                          transition-all duration-200 ease-in
-                          group-hover:opacity-100
-                        "
-                    />
-                  </a>
+                    {exp.company}
+                  </ExternalLink>
                 ) : (
                   exp.company
                 )}
@@ -59,11 +55,11 @@ export const Experience = () => (
                 {exp.start}&thinsp;-&thinsp;{exp.end}
               </p>
             </div>
-            <h4 className="font-medium text-neutral-400">{exp.title}</h4>
+            <h4 className="font-medium text-neutral-500 dark:text-neutral-400">
+              {exp.title}
+            </h4>
           </div>
-          <p className="text-sm text-neutral-600 group-hover:text-neutral-500">
-            {exp.description}
-          </p>
+          <p className="text-sm text-neutral-500">{exp.description}</p>
         </li>
       ))}
     </ul>

@@ -7,7 +7,7 @@ import { NavBar } from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ethanbyeon.vercel.app"),
-  title: "Ethan Byeon | Software Engineer & Product Design",
+  title: "Ethan Byeon",
   description:
     "Software Engineer from Los Angeles, building cool products that blend engineering, design, & culture.",
   openGraph: {

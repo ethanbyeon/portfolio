@@ -3,7 +3,7 @@ import { ExternalLink } from "@/components/external-link";
 
 export const Contact = () => (
   <section id="contact">
-    <h2 className="mb-2 font-bold text-xl text-neutral-500">Contact</h2>
+    <h2 className="mb-4 font-bold text-xl uppercase dark:text-neutral-500">Contact</h2>
     <ul className="flex gap-8">
       {CONTACTS.map((contact) => (
         <li key={contact.title}>
