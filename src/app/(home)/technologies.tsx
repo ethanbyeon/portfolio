@@ -3,7 +3,9 @@ import { TOOLS } from "@/data/tools";
 
 export const Technologies = () => (
   <section id="technologies">
-    <h2 className="mb-4 font-bold text-xl uppercase dark:text-neutral-500">Technologies</h2>
+    <h2 className="mb-4 font-bold text-xl uppercase dark:text-neutral-500">
+      Technologies
+    </h2>
     <div
       className="
         grid auto-rows-min

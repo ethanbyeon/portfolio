@@ -92,7 +92,7 @@ export const Projects = () => (
                 className="
                   grid grid-cols-3 sm:grid-cols-5
                   gap-y-0.5 gap-x-1
-                  text-xs text-neutral-500 dark:text-neutral-600
+                  text-xs text-neutral-500 dark:text-neutral-500
                 "
               >
                 {techList.map((tech) => (

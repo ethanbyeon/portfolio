@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { EXPERIENCE } from "@/data/experience";
 import { ExternalLink } from "@/components/external-link";
 
