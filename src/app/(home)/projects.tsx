@@ -3,7 +3,7 @@ import { PROJECTS } from "@/data/projects";
 
 export const Projects = () => (
   <section id="projects" className="scroll-mt-20">
-    <h2 className="mb-2 font-bold text-xl uppercase dark:text-neutral-500">Projects</h2>
+    <h2 className="mb-4 font-bold text-xl uppercase dark:text-neutral-500">Projects</h2>
 
     <ul>
       {PROJECTS.map((exp) => {
@@ -17,10 +17,11 @@ export const Projects = () => (
           <li
             key={exp.title}
             className="
-              group relative mt-2
+              group
+              relative
               grid grid-cols-[minmax(0,2fr)_minmax(0,2fr)_minmax(0,1fr)]
               items-center
-              gap-x-4 gap-y-1 py-3
+              gap-x-4 gap-y-2 pt-8 pb-4
 
               border-b dark:border-neutral-800
               transition-all duration-500
@@ -87,7 +88,7 @@ export const Projects = () => (
               </p>
             </div>
 
-            <div className="col-span-3 mt-4">
+            <div className="col-span-3 mt-8">
               <div
                 className="
                   grid grid-cols-3 sm:grid-cols-5

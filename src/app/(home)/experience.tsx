@@ -6,13 +6,13 @@ export const Experience = () => (
     <h2 className="mb-4 font-bold text-xl uppercase dark:text-neutral-500">
       Experience
     </h2>
-    <ul className="space-y-4">
+    <ul>
       {EXPERIENCE.map((exp) => (
         <li
           key={exp.company}
           className="
               group
-              relative flex flex-col pb-2
+              relative flex flex-col pt-8 pb-4
               border-b dark:border-neutral-800
               transition-all duration-500
               before:content-['']
@@ -58,7 +58,7 @@ export const Experience = () => (
               {exp.title}
             </h4>
           </div>
-          <p className="text-sm text-neutral-500">{exp.description}</p>
+          <p className="mt-4 text-sm text-neutral-500">{exp.description}</p>
         </li>
       ))}
     </ul>
