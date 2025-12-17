@@ -32,8 +32,14 @@ export function ExternalLink({
     >
       <span
         className={cn(
+          "relative inline-block",
           "transition-colors duration-200 ease-in",
-          "group-hover:underline",
+          "after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-px after:h-px after:block after:pointer-events-none",
+          "after:opacity-0 group-hover:after:opacity-100",
+          "after:[background-image:repeating-linear-gradient(90deg,currentColor_0_8px,transparent_8px_12px)]",
+          "after:[background-size:12px_1px] after:[background-position:0_0]",
+          "group-hover:after:[animation:dash-underline_.8s_linear_infinite]",
+          "motion-reduce:group-hover:after:[animation:none]",
           underlineClassName,
           textClassName,
         )}

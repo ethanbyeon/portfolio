@@ -129,3 +129,11 @@
     color: var(--selection-fg);
   }
 }
+
+@layer utilities {
+  @keyframes dash-underline {
+    to {
+      background-position: 12px 0;
+    }
+  }
+}
