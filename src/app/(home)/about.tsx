@@ -1,5 +1,5 @@
 import { ExternalLink } from "@/components/external-link";
-import { Contact } from "./contact";
+import { CONTACTS } from "@/data/contacts";
 import { Technologies } from "./technologies";
 
 export const About = () => (
@@ -20,44 +20,46 @@ export const About = () => (
             Hi, I&apos;m Ethan.
           </span>
           <br />
-          Software engineer from Los Angeles,
+          Software engineer in Los Angeles.
           <br />
-          building cool products that blend engineering, design, & culture.
+          Building user-facing products that blend engineering, design, &
+          culture.
         </h1>
       </div>
 
       {/* Body */}
       <div className="space-y-2 leading-relaxed font-medium text-neutral-500 dark:text-neutral-400 text-balance max-w-xl">
         <p>
-          I&apos;m a recent Computer Science graduate from UC Santa Cruz focused
-          on building user-facing products, from data to UI. Recently, I built{" "}
+          I&apos;m a recent Computer Science graduate from UC Santa Cruz.
+          <br />
+          I&apos;ve built{" "}
           <ExternalLink
             href="https://padoh.vercel.app"
             className="hover:text-primary"
           >
             Padoh
           </ExternalLink>
-          , led the frontend for BudgetByte, and taught computer science to
-          middle and high school students.
+          end to end, led the frontend and design for BudgetByte, and taught
+          computer science to middle and high school students.
         </p>
       </div>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 text-xs text-neutral-600 dark:text-neutral-400">
-        {["Full stack", "Frontend", "Backend", "Engineering", "Design"].map(
-          (tag) => (
-            <span
-              key={tag}
-              className="rounded-full capitalize border dark:border-neutral-800 px-3 py-1"
+      {/* Contacts */}
+      <ul className="flex gap-8">
+        {CONTACTS.map((contact) => (
+          <li key={contact.title}>
+            <ExternalLink
+              href={contact.link}
+              className="font-semibold text-primary hover:text-neutral-500"
+              underlineClassName="group-hover:decoration-primary"
             >
-              {tag}
-            </span>
-          ),
-        )}
-      </div>
+              {contact.title}
+            </ExternalLink>
+          </li>
+        ))}
+      </ul>
     </div>
 
-    <Contact />
     <Technologies />
   </section>
 );
